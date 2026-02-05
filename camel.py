@@ -1,12 +1,11 @@
 
-camel = input("Enter a sentance in camel case: ").lower()
+camel = input("Enter a sentance in camel case: ")
 
+snake = ""
+for uppercase in camel:
+    if uppercase.isupper():
+        snake += "_" + uppercase.lower()
+    else:
+        snake += uppercase
 
-for upper in camel:
-    if upper.isupper():
-        camel = camel.replace (upper, "_" + upper.lower())
-
-print (camel)
-
-
-
+print (snake)
